@@ -74,13 +74,13 @@ images.push(
       </div>
       <div class="col-md-4">
         <ul>
-          <li class="selector"><a href="petofi">Petőfi-mellszobor</a></li>
-          <li class="selector"><a href="2vh">Elhurcoltak emlékére állított kopjafa</a></li>
-          <li class="selector"><a href="istvan">Szent István király szobra </a></li>
-          <li class="selector"><a href="mell">Dobó István mellszobra</a></li>
-          <li class="selector"><a href="pho">Hviezdoslav-szobor</a></li>
-          <li class="selector"><a href="herceg">Herczegh Géza mellszobra </a></li>
-          <li class="selector"><a href="turu">Turul-szobor</a></li>
+          <li class="selector"><a href="/petofi">Petőfi-mellszobor</a></li>
+          <li class="selector"><a href="/2vh">Elhurcoltak emlékére állított kopjafa</a></li>
+          <li class="selector"><a href="/istvan">Szent István király szobra </a></li>
+          <li class="selector"><a href="/mell">Dobó István mellszobra</a></li>
+          <li class="selector"><a href="/pho">Hviezdoslav-szobor</a></li>
+          <li class="selector"><a href="/herceg">Herczegh Géza mellszobra </a></li>
+          <li class="selector"><a href="/turu">Turul-szobor</a></li>
         </ul>
       </div>
       <div class="col-md-4">
@@ -107,7 +107,6 @@ images.push(
 
     selectors.forEach((element,index) => {
       element.addEventListener("mouseover",(event) => {
-        console.log("hallo")
         change_image()
         image_elements[index].style.setProperty("display","block")
       })
