@@ -2,83 +2,55 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-
-<Layout title="Main">
-  <div class="navbar">
-    <div class="cimer_class"><img src="/cimer.png" class="logo">
-      <h4>Nagykapos</h4>
-    </div>
-    <nav>
-      <ul>
-        <li><a href="main.html">Főoldal</a>
-        </li>
-        <li><a href="varos.html">Város térképe</a>
-        </li>
-        <li><a href="tortenelme.html">Történelme</a>
-        </li>
-        <li><a href="nevezetessegek.html">Nevezetességek</a>
-        </li>
-        <li><a href="erdekessegek.html">Érdekességek</a>
-        </li>
-      </ul>
-    </nav>
-    <img src="/menu2.svg" class="menu-icon">
-  </div>
+<Layout title="Főoldal">
   <div class="container">
     <div class="row">
       <div class="col">
-        <h1>Nagykapos</h1>
-        <p>
-          Lorem ipsum dolor sit amet, consectutor,adisdaoksadasnkadsa sdéja ésjdaéés
-          Lorem ipsum dolor sit amet, consectutor,adisdaoksadasnkadsa sdéja ésjdaéés
-        </p>
-        <button type="button">Fedezz fel</button>
+        <h1 style="text-decoration: none;
+        background: linear-gradient(to bottom, #2B3467, #1e1e6d);
+        -webkit-background-clip: text;
+        font-family: Georgia, serif;
+        -webkit-text-fill-color: transparent;
+        color: white;">
+        
+        Nagykapos</h1>  
+        <a href="galery">
+        <button type="button" class="a">Fedezz fel!</button>
+      </a>
       </div>
       <div class=" col">  
-        <div class="card card1">
+          <div class="text-overlay">A Dobó István téren található, amely a kulturális értékek és a térség hagyományainak
+            megőrzését célzó társas és kulturális rendezvények színhelyéül szolgál. Itt található az állandó
+            fotókiállítás Robert és Cornell Cap, híres amerikai fotóművészek képeiből.</div>
+        <div class="card card1 ">
           <h5>Városháza</h5>
-          <p>Lorem ipsum colod dolor sit amet, consectutor asdkalskdsalkdsalasdkdassadklak</p>
+       
         </div>
-        <div class="card card2">
-          <h5>Petőfi</h5>
-          <p>Lorem ipsum colod dolor sit amet, consectutor asdkalskdsalkdsalasdkdassadklak</p>
+      </a>
+        <div class="card card2 ">
+          <h5>Művelődési központ</h5>
         </div>
-        <div class="card card3">
-          <h5>Öreg</h5>
-          <p>Lorem ipsum colod dolor sit amet, consectutor asdkalskdsalkdsalasdkdassadklak</p>
+      </a>
+        <div class="card card3 ">
+          <h5>Református templom</h5>
         </div>
-        <div class="card card4">
-          <h5>Turul</h5>
-          <p>Lorem ipsum colod dolor sit amet, consectutor asdkalskdsalkdsalasdkdassadklak</p>
+      </a>
+        <div class="card card4 ">
+          <h5>Mécs László</h5>
         </div>
+      </a>
       </div>
     </div>
   </div>
-      <div class="footer">
-        <div class="footer_container">
-          <div class="col_1">
-            <a href="#" class="Nagykapos">Nagykapos</a>
-          </div>
-          <div class="col_2">
-            <ul class="menu">
 
-            <li>
-              <a href="#">Főoldal</a>
-            </li>
-
-            <li>
-              <a href="#">Érdekességek</a>
-            </li>
-
-            <li>
-              <a href="#">Nevezetességek</a>
-            </li>
-
-            <li>
-              <a href="#">Történelem</a>
-            </li>
-          </ul>
-          </div>
-          </div>
-        </div>
-      </Layout>
+  <style>
+    .card {
+      font-family: "Times New Roman", Times, serif;
+    }
+  .a 
+    {
+      font-family: "Times New Roman", Times, serif;
+      font-size: 22px;
+    }
+  </style>
+</Layout>
