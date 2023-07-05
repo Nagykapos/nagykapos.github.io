@@ -3,6 +3,11 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <style is:global>
+
+h1
+      {
+      font-family: Georgia, serif;
+    }
   #map {
     width: 600px;
     height: 400px;
@@ -33,8 +38,8 @@ import Layout from "../layouts/Layout.astro";
 <Layout title="Város Térképe">
   <div class="row">
     <div class="col">
-      <h1>VÁROS TÉRKÉPE</h1>
-      <button type="button"><a href="galery"><h2>360° Galéria</h2></a></button>
+      <h1 style="color: #2B3467; font-size: 80px;" >Város térképe</h1>
+      
     </div>
     <div class="map-container">
       <div id="map" style="height: 450px"></div>
@@ -45,50 +50,50 @@ import Layout from "../layouts/Layout.astro";
   import * as L from "leaflet";
   let markers = [
     {
-      nev: "Herczegh Géza szobra",
+      nev: "Herczegh Géza mellszobra",
       src: "/herczegh_geza/IMG_5321.jpg",
       coord: [48.5543021153523, 22.076704806295883],
     },
     {
-      nev: "P.O.Hviezdoslav szobor",
+      nev: "Hviezdoslav-szobor",
       src: "/pho_szobor/IMG_5371.jpg",
       coord: [48.55553628932887, 22.07458684311116],
     },
-    { nev: "2.VH halottak", src: "//szobor_templom_elott/IMG_5242.jpg", coord: [48.55282765274451, 22.077181701932265] },
+    { nev: "Elhurcoltak emlékére állított kopjafa", src: "/kopjafa.jpg", coord: [48.55282765274451, 22.077181701932265] },
     {
-      nev: "Dobó Istvan szobra",
+      nev: "Dobó Istvan mellszobra",
       src: "/szobor_szokokut/IMG_5200.jpg",
       coord: [48.55411780536286, 22.07509452857798],
     },
     {
-      nev: "Szent Istvan Király",
+      nev: "Szent Istvan király szobra",
       src: "/szobor_templom_mogott/IMG_5269.jpg",
       coord: [48.55246767110387, 22.07804085524672],
     },
     {
-      nev: "Petőfi Sándor Mellszobor",
+      nev: "Petőfi-mellszobor",
       src: "/szobor_szokokut_petofi/IMG_5217.jpg",
       coord: [48.554491985562784, 22.07527234728118],
     },
     {
-      nev: "Turul Madár szobra",
+      nev: "Turul-szobor",
       src: "/turul/IMG_5338.jpg",
       coord: [48.555665719789815, 22.075155925868835],
     },
     
     {
-      nev: "Sarga Templom",
+      nev: "Református templom",
       src: "/sargatemplom.jpg",
       coord: [48.55265357984778, 22.0774825087138],
     },
     {
-      nev: "Mécs László",
+      nev: "Mécs László mellszobra",
       src: "/mecslaszlo.jpg",
       coord: [48.55447139619999, 22.068121095685463],
     },
     {
       nev: "II. András szobra",
-      src: "/sargatemplom.jpg",
+      src: "/2andras.jpg",
       coord: [48.55586946380365, 22.075113670964463],
     },
     {
@@ -97,7 +102,7 @@ import Layout from "../layouts/Layout.astro";
       coord: [48.554264846500985, 22.07551758867893],
     },
     {
-      nev: "Ludovit Stur  szobra",
+      nev: "Ľudovít Štúr szobra",
       src: "/ludovit.jpg",
       coord: [48.55081318428273, 22.084728416089288],
     },

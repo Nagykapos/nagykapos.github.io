@@ -16,8 +16,24 @@ import Layout from "../layouts/Layout.astro";
         >
           Nagykapos
         </h1>
+        <br>
+        <p style="color: #2B3467; 
+        font-family: Times New Roman, Times, serif;
+        font-size: 20px;
+        line-height: 30px;
+        ">Kedves látogató! <br>  <br>
+
+          Szeretnénk, ha ez a weboldal egyfajta vezérfonálként szolgálna számodra, melynek segítségével
+           könnyedén feltérképezheted a várost nevezetességeit. <br>
+           
+           
+           
+           
+           
+           A galéria révén virtuálisan „körbe sétálhatod” a városban rejlő kincseket, majd a térkép segítségével eljuthatsz hozzájuk és testközelből is megtekintheted azokat. 
+          </p>
         <a href="galery">
-          <button type="button" class="a">Fedezz fel!</button>
+          <button type="button" class="button">Fedezz fel!</button>
         </a>
       </div>
       <div class="col">
@@ -29,11 +45,10 @@ import Layout from "../layouts/Layout.astro";
         >
           <h5>Városháza</h5>
           <div class="card-text">
-            A Dobó István téren található, amely a kulturális értékek és a
-            térség hagyományainak megőrzését célzó társas és kulturális
-            rendezvények színhelyéül szolgál. Itt található az állandó
-            fotókiállítás Robert és Cornell Cap, híres amerikai fotóművészek
-            képeiből.
+            A nagykaposi Városháza épülete otthont ad számos kulturális 
+            eseménynek, valamint hivatalos ügyeiket is itt intézhetik a lakosok.
+
+
           </div>
         </div>
         <div class="card card2">
@@ -47,38 +62,33 @@ import Layout from "../layouts/Layout.astro";
           </div>
         </div>
         <div class="card card3">
-          <h5>Református templom</h5>
+          <h5>Erdélyi János Alapiskola</h5>
           <div class="card-text">
-            A Dobó István téren található, amely a kulturális értékek és a
-            térség hagyományainak megőrzését célzó társas és kulturális
-            rendezvények színhelyéül szolgál. Itt található az állandó
-            fotókiállítás Robert és Cornell Cap, híres amerikai fotóművészek
-            képeiből.
+            Az Erdélyi János Alapiskolában 1-9. osztályig zajlik az oktatás magyar nyelven.
           </div>
         </div>
         <div class="card card4">
-          <h5>Mécs László</h5>
+          <h5>Református templom</h5>
           <div class="card-text">
-            A Dobó István téren található, amely a kulturális értékek és a
-            térség hagyományainak meg őrzését célzó társas és kulturális
-            rendezvények színhelyéül szolgál. Itt található az állandó
-            fotókiállítás Robert és Cornell Cap, híres amerikai fotóművészek
-            képeiből.
+            1787-ben építették fel barokk-klasszicista stílusban.
+             A bejáratfölötti tábla tanúsága szerint Jánosi György 
+             lelkészsége és László Pál kurátorsága idején szentelték fel. 
           </div>
         </div>
       </div>
     </div>
   </div>
 </Layout>
-
 <style>
+  
+.p{ 
+display: inline;}
   .card {
     font-family: "Times New Roman", Times, serif;
     position: relative;
     transition: all 0.2s ease-in-out;
     background-color: none;
   }
-
   .card-text {
     width: 90%;
     height: 0;
@@ -102,8 +112,20 @@ import Layout from "../layouts/Layout.astro";
     color: white;
   }
 
-  .a {
+  .button {
+    display: inline-block;
     font-family: "Times New Roman", Times, serif;
-    font-size: 22px;
+    padding: 10px 20px;
+    font-size: 23px;
+    background: linear-gradient(to right, #fff, #ccc);
+    color: #333;
+    border: none;
+    transition: background 0.3s ease, transform 0.3s ease;
+    will-change: transform;
+  }
+
+  .button:hover {
+    background: linear-gradient(to right, #ccc, #fff);
+    transform: scale(1.1);
   }
 </style>
