@@ -1,0 +1,170 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+
+
+<Layout title="Történelme">
+  <div class="container">
+    <div class="column">
+      <h2>Létrejötte</h2>
+      <br>
+      <p>Nagykapos valószínűleg a <strong>11.-12. században alakult ki</strong>, ahol az Eperjes - Tokaj és Ungvár -
+        Kassa kereskedelmi útvonalak kereszteződtek. Feltehetőleg, elnevezése az ősi magyar „kapu”
+        szóból ered, mivel Kapos a gyepű kapuja volt. <br> <br>   
+       <strong> A jelenlegi Nagykapos a Kapos, Kiskapos, Csepely és Veskóc községek egyesítésével jött
+létre. </strong> Kapos, Kiskapos és Csepely 1914-ben egyesült, Veskóc közigazgatásilag 1960-tól
+tartozik Nagykaposhoz.
+       </p>
+    </div>
+    <div class="column">
+      <h2>  Név változatok</h2>
+      <br>
+      <p>A <strong>legrégibb írásos emlék</strong> Kapos nevének említéséről II. András király 1214-ben keltezett
+        birtoklevelében található. Ebben az oklevélben Kapos neves<strong> Copus</strong>. A Sztáray kódex 1314-
+        ben szintén Copus-ként említi, 1347-ben <strong>Kapus</strong>, 1392-ben <strong>Kapuus</strong>, 1400-ban <strong>Egyhazas-</strong>
+      <strong>Kapus</strong>, 1414-ben <strong>Kápolnás-Kapus</strong> a neve.</p>
+      
+         
+    </div>
+    <div class="column">
+      <h2>12-15. század </h2>
+      <br>
+      <p>Területének nagyobb része a <strong>12. században királyi birtok</strong> volt. <strong>1417-ben már vásártartási
+        jogú mezőváros.</strong> 1493-tól <strong> káptalani iskola</strong>    működött a városban.
+      <br><br> 
+      Nagykaposnak 1332-1337 között már <strong>római katolikus temploma</strong> volt. A reformáció korában
+      a református gyülekezet elfoglalta a templomot, majd az ellenreformáció idején a katolikusok
+      visszaszerezték. Végül a római katolikus püspökség lemondott róla és a reformátusok
+      újjáépítették.
+    </p>
+       
+       
+  </div>
+  
+  
+</div>
+</div>
+<div class="container">
+  <div class="column">
+    <h2>16-17. század</h2>
+    <br>
+    <p><strong> Céhes ipara és kereskedelme volt</strong> : szabók, cipészek, a csizmadiák alakítottak céheket. A 17.
+      században <strong> fazekas-műhelyek</strong>  jöttek létre. A rendi felkelések és a Rákóczi-szabadságharc
+      azonban visszavetette fejlődését.
+    <br>
+  <br>
+  1684-ben Thököly Imre fejedelem midőn egybekelendő volt Zrínyi Ilonával, Budáról jövet
+  Nagykaposon fogadta Zrínyi Ilonát, aki magával hozta kisfiát, II. Rákóczi Ferencet is.
+
+</p>
+      <br>
+
+  </div>
+  <div class="column">
+    <h2>18-19. század</h2>
+    <br>
+    <p>A 18. század elejére a város csaknem elnéptelenedett a vallási villongások és a nagy
+      táborjárások következtében. A 19. században Nagykaposról és környékéről is nagyszámú
+      honvéd harcolt az 1848-49-es magyar szabadságharcban.</p>
+   
+       
+  </div>
+  <div class="column">
+    <h2>20-21. század</h2>
+    <br>
+    <p>A 20. század elején megkezdődött a város iparosodása, üzembe helyezték a hengermalmot és
+      a nyomdát. Megindult a közlekedés a Vaján-Nagykapos-Mátyóc vasútvonalon, majd az
+      Ungvárig meghosszabbított szakaszon. 
+      <br>
+      <br>
+      Az első világháborút lezáró trianoni békeszerződés eredményeként <strong> Nagykapos a
+Csehszlovák Köztársasághoz került</strong>  1920-tól a megnevezése Kapušany, 1927-től Veľké
+Kapušany, magyarul Nagykapos.
+<br>
+<br>1925-ben kezdte el működését a malom mellett felépült áramfejlesztő. 1936-ban nagy
+terményraktárt építettek, ezzel megszűntek a gabonaraktározás problémái.
+<br>
+<br>A második világháború Nagykapost is érintette. 1944 tavaszán közel háromszáz zsidó
+nemzetiségű embert deportáltak és koncentrációs táborba vittek.
+
+1945 után megkezdődött a békés építkezés időszaka: megalakult az EFSz, felépült a vajáni
+hőerőmű, a kompresszorállomás, a Slovnaft olajfinomítója.
+
+<br><br>
+A városban két alapiskola, egy művészeti alapiskola, egy kisegítő iskola és gyerekotthon,
+gimnázium, két szakközépiskola működik.
+    </p>
+</div>
+
+</div>
+</div>
+</div>
+
+
+<style>
+strong {
+    font-family: "Times New Roman", Times, serif;
+  }
+.image-container {
+  display: inline-block;
+  padding: 5px;
+  position: relative;
+  width: 50%;
+  transition: width 0.5s;
+  box-shadow: 0px 0px 0px 5px #2B3467;
+}
+
+.image-container img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.image-container:hover {
+  width: 95%;
+}
+.container {
+display: flex;
+justify-content: center;
+}
+
+h2 {
+  font-size:30px;
+  color: white;
+  background: linear-gradient(to right, #EB455F,#EB455e);
+}
+h2, p {
+    font-family: "Times New Roman", Times, serif;
+  }
+  
+  .column {
+    flex-basis: calc(50% - 20px);
+    text-align: center;
+    position: relative;
+    margin: 15px;
+  }
+  .column p {
+    font-size: calc(16px + 7px);
+    color: #27374D;
+    text-align: justify;
+    line-height: 1.3  ; 
+    padding: 15px;
+  }
+
+.column::before {
+content: '';
+position: absolute;
+top: -2px;
+left: -2px;
+right: -2px;
+width: calc(100% - 2px);
+height: calc(100% + 0px);
+
+border: 4px solid #2B3467;
+transition: all 0.5s ease;
+}
+
+
+</style>
+</Layout>

@@ -1,0 +1,282 @@
+---
+export interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<!DOCTYPE html>
+<html lang="hu">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">  <!-- az oldal meta adata -->
+		<title>{title}</title>
+	</head>
+	<body>
+    <Header />
+		<slot />
+    <Footer />
+	</body>
+</html>
+
+<style is:global>
+	:root {
+		--accent: 124, 58, 237;
+		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
+    --primary: blue;
+	}
+	html {
+		font-family: system-ui, sans-serif;
+	}
+	code {
+		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+			Bitstream Vera Sans Mono, Courier New, monospace;
+	}
+
+	* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container{
+  width: 100%;
+  height: 100%;
+  margin: 150px 0; 
+  background-position: center; 
+  background-size: cover;
+  padding-left: 8%;
+  padding-right: 8%;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(to bottom, #c1e6fd, #69bff5);
+  background-attachment: fixed;
+  background-size: cover;background-size: cover;
+}
+.navbar {
+    height: 12%;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(to right, #EB455F,#FCFFE7, #BAD7E9);
+  }
+
+
+.navbar li {
+  text-decoration: none;
+  color: #FFFFFF;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.navbar li:hover {
+  background: linear-gradient(to bottom, #EB455F, #972424);
+}
+
+.navbar li::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #FFFFFF;
+  transform: scaleX(0);
+  transition: transform 0.3s;
+}
+
+.navbar li:hover::after {
+  transform: scaleX(1);
+}
+.menu-icon{
+  width: 30px;
+  margin-left: 60px;
+  cursor: pointer;
+}
+nav{
+    flex: 1;
+    text-align: right;
+
+}
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin-left: 60px;
+    font-size: 20px;
+}
+
+.cimer_class {
+  display :flex;
+  align-items: center;
+}
+
+.cimer_class h4 {
+  text-decoration: none;
+    background: linear-gradient(to bottom, #2B3467, #2a2ac4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: white;
+  font-size: 35px;
+
+}
+
+.map_class {
+  margin: 25px;
+width: 900px;
+height: 800px;
+margin-left: 0px;
+ 
+}
+nav ul li a{
+  text-decoration: none;
+    background: linear-gradient(to bottom, #2B3467, #2a2ac4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: white;
+    font-size: 20px;
+}
+
+.nav ul li ::after{
+  content: '';
+  height: 5px;
+  width: 100%;
+  background: white;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  transition: 0.5s;
+}
+
+
+
+.row{
+  display: flex;
+  height: fit-content;
+  align-items: center;
+}
+
+.col{
+  flex-basis: 50%;
+}
+
+h1{
+  color: #fff;
+  font-size: 100px;
+
+}
+p{
+  color: white;
+  font-size: 11px;
+  line-height: 15px;
+  
+}
+button{
+  width: 180px;
+  color: #000;
+  font-size: 12px;
+  padding: 22px 0;
+  background: #fff;
+  border: 0;
+  border-radius: 25px;
+  outline: none;
+  margin-top: 30px;
+
+}
+.card{
+    width: 243px;
+    height: 230px;
+    display: inline-block;
+    border-radius: 10px;
+    padding: 15px 25px;
+    box-sizing: border-box;
+    cursor: pointer;
+    margin: 10px 15px;
+    background-image: url(public/Turul.jpg);
+    background-position: center;
+    background-size: cover;
+    transition: 0.5s;
+
+
+}
+
+.card1 {
+  background-image: url(public/varoshaza2.jpg)
+}
+
+.card2 {
+  background-image: url(public/muvkozpont.jpg)
+}
+
+.card3 {
+  background-image: url(public/sargatemplom.jpg)
+}
+
+.card4 {
+  background-image: url(public/mecslaci2.jpg)
+}
+
+.card:hover {
+  transform:translateY(-10px)
+}
+.h5 {
+  color: #fff;
+  text-shadow: 0 0 5px #999;
+
+}
+
+.card p {
+  text-shadow: 0 0 15px #000;
+  font-size: 8px;
+}
+
+
+.logo {
+  width: 80px;
+  cursor: pointer;
+  padding: 15px;
+  transition: 0.5s;
+
+
+}
+
+.logo:hover {
+  transform:translateY(-6px)
+   }
+
+
+
+   .footer .footer_container{
+      align-items: center;
+      text-align: center;
+   }
+   .footer .Nagykapos{
+    margin: 0;
+   }
+.footer .menu li {
+  display: inline-block;
+  margin: 1em;
+  text-align: center;
+}
+.footer .menu a {
+  transition: 0.3s;
+  font-weight: 300;
+}
+
+
+.col_3 {
+  padding: 100px;
+}
+
+.col_2 li {
+  color: white;
+  font-size: 17px;
+}
+</style>

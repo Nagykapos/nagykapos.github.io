@@ -1,0 +1,187 @@
+---
+import Layout from "../layouts/Layout.astro";
+let images = [];
+
+images.push(
+  await Astro.glob("/public/szobor_szokokut_petofi/*").then((files) => {
+    return files[0].default;
+  })
+);
+
+images.push(
+  await Astro.glob("/public/szobor_templom_elott/*").then((files) => {
+    return files[0].default;
+  })
+);
+
+images.push(
+  await Astro.glob("/public/szobor_templom_mogott/*").then((files) => {
+    return files[0].default;
+  })
+);
+
+images.push(
+  await Astro.glob("/public/szobor_szokokut/*").then((files) => {
+    return files[0].default;
+  })
+);
+images.push(
+  await Astro.glob("/public/pho_szobor/*").then((files) => {
+    return files[0].default;
+  })
+);
+images.push(
+  await Astro.glob("/public/herczegh_geza/*").then((files) => {
+    return files[0].default;
+  })
+);
+images.push(
+  await Astro.glob("/public/turul/*").then((files) => {
+    return files[0].default;
+  })
+);
+---
+
+<style is:global>
+  .img-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 14px 0;
+  }
+
+  .swiper-img {
+    margin: 0 auto;
+    width: fit-content;
+    display:none;
+  }
+  .swiper-img:first-child {
+    display:block;
+  }
+  .swiper-img img {
+    width: 300px;
+    aspect-ratio: 3/4;
+    border: 5px solid #1d1f1d;
+  }
+</style>
+
+<Layout title="Galéria">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <h1>Galéria</h1>
+        <h1>360°</h1>
+      </div>
+      <div class="col-md-4">
+        <ul style>
+          <li class="selector"><a href="petofi">Petőfi-mellszobor</a></li>
+          <li class="selector"><a href="2vh">Elhurcoltak emlékére állított kopjafa</a></li>
+          <li class="selector"><a href="istvan">Szent István király szobra </a></li>
+          <li class="selector"><a href="mell">Dobó István mellszobra</a></li>
+          <li class="selector"><a href="pho">Hviezdoslav-szobor</a></li>
+          <li class="selector"><a href="herceg">Herczegh Géza mellszobra </a></li>
+          <li class="selector"><a href="turu">Turul-szobor</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <div class="map-container">
+          {
+            images.map((image) => (
+              <div class="swiper-img">
+                <img class="img" src={image} alt=""/>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    let image_elements = document.querySelectorAll(".swiper-img")
+    let selectors = document.querySelectorAll(".selector")
+    function change_image() {
+      image_elements.forEach((img) => {
+        img.style.setProperty("display","none")
+      })
+    }
+
+    selectors.forEach((element,index) => {
+      element.addEventListener("mouseover",(event) => {
+        console.log("hallo")
+        change_image()
+        image_elements[index].style.setProperty("display","block")
+      })
+    })
+  </script>
+  <style>
+    h1
+      {
+      font-family: "Times New Roman", Times, serif;
+    }
+    
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    .col-md-4 {
+      width: 32%;
+      padding: 10px;
+    }
+    .col-md-4 ul li {
+      margin-bottom: 5px;
+      color: #333;
+      font-family: Arial, sans-serif;
+
+      padding: 10px;
+    }
+    .col-md-4 ul li:last-child {
+      margin-bottom: 0;
+    }
+   
+    .col-md-4 ul li a {
+      color: #333;
+      font-family:  "Times New Roman", Times, serif;
+      text-decoration: none;
+      transition: color 0.3s ease-in-out;
+    }
+    .col-md-4 ul li a:hover {
+      color: #0077be;
+    }
+
+    .col-md-4 ul li {
+      margin-bottom: 5px;
+      font-size: 16px;
+      font-weight: bold;
+      position: relative; /* hozzáadva */
+    }
+    .col-md-4 ul li a {
+      color: #333;
+      font-family:"Times New Roman", Times, serif;
+      text-decoration: none;
+    }
+    .col-md-4 ul li::before {
+      /* hozzáadva */
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -10px;
+      width: 3px;
+      height: 100%;
+      background-color: #80430ad5;
+      transform: scaleY(0);
+      transform-origin: top center;
+      transition: transform 0.3s ease-in-out;
+    }
+    .col-md-4 ul li:hover::before {
+      transform: scaleY(1);
+    }
+    .col-md-4 ul li:last-child {
+      margin-bottom: 0;
+    }
+    .col-md-4 ul li a:hover {
+      color: #0077be;
+    }
+  </style>
+
+</Layout>

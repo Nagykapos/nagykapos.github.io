@@ -1,0 +1,91 @@
+---
+import Layout from '../layouts/Layout.astro';
+const images = await Astro.glob("/public/szobor_templom_mogott/*").then(files => {
+  return files.map(file => file.default);
+});
+---
+
+
+<Layout title="Szent István Király"> 
+
+<h2 class="Szistvan">Szent Istvan </h2>
+
+<p class="left-align">Ide írd a szöveget.</p>
+<style is:global>
+.img-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 16px 0;
+}
+
+.swiper-img {
+  margin: 0 auto;
+  width: fit-content;
+}
+.swiper-img img{
+  width: 600px;
+  aspect-ratio: 3/4;
+  border: 2px solid #1d1f1d;
+}
+.swiper-img.inactive {
+  display:none;
+}
+
+.swiper-img.active {
+  display:block;
+}
+
+h2 {
+  text-align: center;
+}
+
+
+.left-align{
+  text-align: left;
+}
+
+</style>
+
+
+
+<div class="img-container">
+{ images.map((image) => (
+        <div class="swiper-img inactive">
+          <img
+            class=""
+            src={image}
+            alt=""
+          />
+        </div>
+    ))
+}
+
+<input id="image-slider-selector" type="range" step="1" value={Math.floor(images.length)} min="0" max={images.length-1}>
+</div>
+
+</Layout>
+
+<script>
+let images = document.querySelectorAll(".swiper-img")
+function change_image(event)
+{
+  images.forEach((img) => {
+    img.className = "swiper-img inactive"
+  })
+  images[event.target.value].className = "swiper-img active"
+}
+
+
+document.getElementById("image-slider-selector").addEventListener("input",change_image)
+
+document.addEventListener("DOMContentLoaded", (event) => {
+  document.getElementById("image-slider-selector").dispatchEvent(new Event("input"))
+  images.forEach((img) => {
+    let img_element = img.querySelector("img");
+    let image = new Image();
+    console.log(img_element.src)
+    image.src = img_element.src
+    })
+})
+</script>

@@ -1,0 +1,105 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+
+
+<Layout title="Szimbolumok">
+  <div class="container">
+    <div class="column">
+      <h2>Nagykapos város szimbólumai</h2>
+      <br>
+      <p>A város legjelentősebb szimbólumai a <strong>címer</strong>, a <strong>zászló</strong> és a <strong>pecsét</strong>. Nagykapos saját címerrel
+        rendelkezett, így a történelmi szimbólum kiindulási pontként szolgálhatott.
+        <br>
+        A város címerének helyes heraldikus leirata a következő: „Piros pajzs, benne két domború
+        arany kereszt alatt arany félhold és arany csillag”.
+        <br>
+        A városi zászló színei a címer színeit tükrözik, a város számára egyedi jelentőséggel bír. A
+        város zászlaja két mezőre osztott, egyszer függőlegesen, egyszer pedig vízszintesen. A felső
+        részen sárga és piros színek, az alsó részen piros és sárga színek találhatók. A zászló ún.
+        fecskefarok vágásban végződik, mely a zászló lapjának harmadáig ér.
+        <br>
+        Nagykapos város pecsétjét az alábbi vastagbetűs felirattal ellátott címer alkotja: „COPUS
+        VEĽKÉ KAPUŠANY”.</p>
+        <div class="image-container">
+          <img src="flag_1.svg" alt="Reformatus Templom">
+          
+        </div>
+        <br><br>
+        <div class="image-container">
+          <img src="cimer_1.svg" alt="Reformatus Templom">
+          
+        </div>
+        
+</div>
+
+
+<style>
+
+strong {
+    font-family: "Times New Roman", Times, serif;
+  }
+.image-container {
+  display:inline-table ;
+  padding: 5px;
+  position: relative;
+  margin-bottom:5px;
+  width: 50%;
+  transition: width 0.5s;
+  box-shadow: 0px 0px 0px 5px #2B3467;
+}
+
+.image-container img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.image-container:hover {
+  width: 95%;
+}
+.container {
+display: flex;
+justify-content: center;
+}
+
+h2 {
+  font-size:30px;
+  color: white;
+  background: linear-gradient(to right, #EB455F,#EB455e);
+}
+h2, p {
+    font-family: "Times New Roman", Times, serif;
+  }
+  
+  .column {
+    flex-basis: calc(50% - 20px);
+    text-align: center;
+    position: relative;
+    margin: 15px;
+  }
+  .column p {
+    font-size: calc(16px + 7px);
+    color: #27374D;
+    text-align: justify;
+    line-height: 1.3  ; 
+    padding: 15px;
+  }
+
+.column::before {
+content: '';
+position: absolute;
+top: -2px;
+left: -2px;
+right: -2px;
+width: calc(100% - 2px);
+height: calc(100% + 0px);
+
+border: 4px solid #2B3467;
+transition: all 0.5s ease;
+}
+
+
+</style>
+</Layout>

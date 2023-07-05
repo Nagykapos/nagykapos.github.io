@@ -1,0 +1,166 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+
+
+<Layout title="Nagykapos">
+  <div class="container">
+    <div class="column">
+      <h2>Földrajzi fekvés</h2>
+      <br>
+      <p>Nagykapos a  <strong>kelet-szlovákiai síkságon fekszik</strong>, az Ung, Latorca és Laborc folyók közt. Az Ung-vidék központja.
+      A város közigazgatási területe része a Kárpát-medence alrendszerének, azon belül a
+        Keleti Pannon-medence tartományának. A térség nagyobb kiterjedésű, északi része a Nagykaposi-sík
+        geomorfológiai alegységhez tartozik, míg a kisebbik, déli része a Latorca-sík geomorfológiai
+        alegység részét képezi. Nagykapos kataszteri térségének <strong>domborzata túlnyomóan egyenes,
+        sík terület</strong>. A Kelet-szlovákiai-síkság geomorfológiai egységében helyezkedik el, annak két
+        alegységében, a Nagykaposi-síkon és a Latorca-síkon fekszik.</p>
+    </div>
+    <div class="column">
+      <h2>Területi meghatározás</h2>
+      <br>
+      <p> <strong> Nagykapos a Nagymihályi járás második városa és a járás 5. legnagyobb települése.</strong>A
+        település északon Feketemező és Pálóc községekkel, keleten Mátyócvajkóc, Budaháza és
+        Kaposkelecsény településekkel határos, délen Lelesz község, nyugaton pedig Csicser és
+        Mokcsamogyorós alkotják a határait.</p><br>
+        <br>
+     
+         
+    </div>
+    <div class="column">
+      <h2>Vízrajz</h2>
+      <br>
+      <p>
+        Vízrajzi szempontból Nagykapos kataszteri területe az Udocs patak által a <strong> Latorca </strong> mentéhez,
+        majd a <strong> Bodrog </strong>  folyó vízgyűjtő területéhez tartozik. A felszíni állóvizeket az <strong> Ortó </strong>  képviseli
+        (természetvédelmi övezet).
+        </p>
+        <br>
+        <br>
+        <br>
+        
+       
+        <br><br>
+  
+  </div>
+  </div>
+  
+  <div class="container">
+    <div class="column">
+      <h2>Növényvilág</h2>
+      <br>
+      <p>A jelenlegi növénytakarót zömmel a szántóföld-jellegű kultúrák, főként <strong>gabonafélék,
+        olajrepce, napraforgó, takarmányrépa és szemes kukorica </strong>  alkotja. Szőlőültetvények csak
+        kis területen találhatóak a várostól nyugatra. A kataszteri terület kb. 13 %-át erdők fedik. A
+        térségre jellemzők az ártéri kemény- és puhafa ligetek. A helyi közutakat zömmel antropikus-
+        jellegű fa- és cserjés növénytársulások övezik. A réteken, a legelőkön gyakoriak a magányos
+        fák.</p>
+    </div>
+
+    <div class="column">
+   
+        <h2>Védett területek</h2>
+        <br>
+        <p>A növényvilággal összefüggésben említést teszünk a védett területekről is: <strong> Latorca
+          Tájvédelmi Körzet. </strong>Jelentősége a már ritkaságszámba menő, értékes, komplexumot alkotó
+          vízi és mocsári biocönózisokban rejlik, melyek országos szinten is egyedülállók. A ritka vízi
+          növények közül itt él a tündérrózsa, kolokán, hernyópázsit és sok egyéb faj. További értékes
+          fajok: kései szegfű, pompás kosbor, tavaszi tőzike. A területen gazdag az állatvilág is, többek
+          között található itt: nagy szarvasbogár, sisakos sáska, szivárványos ökle, mocsári teknőc,
+          rétisas. <br> <br>
+        
+          A térség északi részét érinti a településtől kb. 5 km távolságra található <strong> Ortó
+          természetvédelmi terület</strong>. Egyedi mocsári és vízi élővilággal rendelkezik.
+          <br> <br>
+            A <strong>Bodrogközi Madárvédelmi Terület</strong> Nagykapos kataszteri térségét a déli részen érinti.
+       </p>
+            
+      
+  </div>
+
+  <div class="column">
+    <h2>Állatvilág</h2>
+    <br>
+    <p> A térségben elterjedt állatok közül néhányat említünk: rágcsálók, mezei nyúl, közönsége ürge,
+      mezei pacsirta, fácán, bogarak közül pl. az aranypettyes bábrabló, fürkészek, kecskebéka,
+      európai sün.</p>
+      
+    
+      
+  
+       
+  </div>
+  
+  </div>
+  </div>
+  
+  
+  <style>
+
+strong {
+    font-family: "Times New Roman", Times, serif;
+  }
+  
+  .image-container {
+    display: inline-block;
+    padding: 5px;
+    position: relative;
+    width: 50%;
+    transition: width 0.5s;
+    box-shadow: 0px 0px 0px 5px #2B3467;
+  }
+  
+  .image-container img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  
+  .image-container:hover {
+    width: 95%;
+  }
+  .container {
+  display: flex;
+  justify-content: center;
+  }
+  
+  h2 {
+    font-size:30px;
+    color: white;
+    background: linear-gradient(to right, #EB455F,#EB455e);
+  }
+  h2, p {
+      font-family: "Times New Roman", Times, serif;
+    }
+    
+    .column {
+      flex-basis: calc(50% - 20px);
+      text-align: center;
+      position: relative;
+      margin: 15px;
+    }
+    .column p {
+      font-size: calc(16px + 7px);
+      color: #27374D;
+      text-align: justify;
+      line-height: 1.3  ; 
+      padding: 15px;
+    }
+  
+  .column::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  width: calc(100% - 2px);
+  height: calc(100% + 0px);
+  
+  border: 4px solid #2B3467;
+  transition: all 0.5s ease;
+  }
+  
+  
+  </style>
+  </Layout>

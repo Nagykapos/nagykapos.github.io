@@ -1,0 +1,128 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Nevezetességek">
+  <div class="container">
+    <div class="gallery-item">
+      <h2> Könyvespolc-házikó</h2>
+      <br>
+      <p>2021 márciusában nyílott meg az ingyenes könyvcsere program házikója, amely azóta is
+        nagyon népszerű, forgalmas és ahol az ember nem csak otthagyhatja a már elolvasott, vagy
+        helyet foglaló könyveit, hanem ahol cserébe igazi kincseket találhat és vihet az itt leadott
+        könyvei helyett.</p>
+      <div class="image-gallery">
+        <img src="feher_elolrol.jpg" alt="Reformatus Templom 1">
+        <img src="feher_bal_oldalrol.jpg" alt="Reformatus Templom 2">
+        <img src="feher_jobb_oldalrol.jpg" alt="Reformatus Templom 3">
+      </div>
+    </div>
+
+    <div class="gallery-item">
+      <h2>Fantázia Ház</h2>
+      <br>
+      <p>A Fantázia Házban könyveket találhatunk. Mindössze 2 szabályt kell betartanunk: azzal a
+        feltétellel vihetünk el egy könyvet, hogy hozunk helyette egy saját darabot. Megtehetjük ezt
+        hétfőtől szombatig 09:00-16:00 között, ill. vasárnap 13:00-16:00 között.</p>
+      <div class="image-gallery">
+        <img src="fekete_szembol.jpg" alt="Kopjafa 1">
+        <img src="fekete_balrol.jpg" alt="Kopjafa 2">
+        <img src="fekete_jobbrol.jpg" alt="Kopjafa 3">
+      </div>
+    </div>
+
+    <div class="gallery-item">
+      <h2>Aszfaltrajzok az Erdélyi János MTNYA előtt</h2>
+      <br>
+      <p>Az alapiskola előtti részt színes aszfaltrajzok díszítik, mely remek lehetőségeket rejt a
+        szórakozásra vágyó gyerekek számára.</p>
+      <div class="image-gallery">
+        <img src="beka1.jpg" alt="Szent István király 1">
+        <img src="beka2.jpg" alt="Szent István király 2">
+        <img src="beka3.jpg" alt="Szent István király 3">
+      </div>
+    </div>
+    <div class="gallery-item">
+      <h2>A szerelem gerendái, A vidéki Ung-vidék tábla</h2>
+      <br>
+      <p>Turisztikai Információs Központ előtt a Fantázia Ház mellett található még 2 említésre méltó
+        érdekesség. 2022 februárjában Valentin-nap alkalmából létesítették „a szerelem gerendáit”,
+        amelyre minden szerelmes felakaszthatja a szerelem lakatját.
+      <br><br>Itt található még „A vidéki Ung-vidék” nevet viselő kihelyezett tábla, amely a térség
+      kerékpárral bejárható útvonalait mutatja be.</p>
+      <div class="image-gallery">
+        <img src="gerendak3.jpg" alt="Reformatus Templom 1">
+        <img src="gerendak2.jpg" alt="Reformatus Templom 2">
+        <img src="gerendak.jpg" alt="Reformatus Templom 3">
+      </div>
+    </div>
+    </div>
+    
+  </div>
+
+
+  
+</Layout>
+
+<style>
+
+
+ h2, p {
+    font-family: "Times New Roman", Times, serif;
+
+  }
+    .image-gallery img {
+    transition: transform 0.3s;
+  }
+
+  .image-gallery img:hover {
+    transform: scale(4.9);
+  }
+  .container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .gallery-item {
+    border: 3px solid #27374D;
+    flex-basis: 300px;
+    margin: 20px;
+    text-align: center;
+  }
+
+  .gallery-item h2 {
+    font-size: 31px;
+    color: white;
+
+    padding-left: 2px;
+    padding-right: 2px;
+  background: linear-gradient(to right, #EB455F,#EB455e);
+  }
+
+  .gallery-item p
+   {
+    line-height: 1.3;
+    text-align: justify;
+    text-justify: inter-word;
+    font-size: 18px;
+    color: black;
+    padding: 15px;
+  }
+
+  .image-gallery {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    border: black;
+  }
+
+  .image-gallery img {
+    width: 200px;
+    height: auto;
+    margin: 5px;
+    border: 0px solid #000000;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  }
+</style>
+

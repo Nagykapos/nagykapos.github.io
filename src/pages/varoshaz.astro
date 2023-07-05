@@ -1,0 +1,61 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+
+
+<Layout title="Nagykapos Városháza">
+        <div class="container">
+          <div class="column">
+            <h1>Érdekesség 1</h1>
+            <p>Ez a szöveg a második oszlopban található.Ez a szöveg a második oszlopban található.
+              Ez a szöveg a második oszlopban található.Ez a szöveg a második oszlopban található.Ez a
+               szöveg a második oszlopban található.Ez a szöveg a második oszlopban található.</p>
+          </div>
+          <div class="column">
+            <h1>Érdekesség 2</h1>
+            <p>Ez a szöveg a második oszlopban található.Ez a szöveg a második oszlopban található.
+              Ez a szöveg a második oszlopban található.Ez a szöveg a második oszlopban található.Ez a
+               szöveg a második oszlopban található.Ez a szöveg a második oszlopban található.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <style>
+ 	.container {
+			display: flex;
+			justify-content: center;
+		}
+
+		.column {
+			flex-basis: calc(50% - 20px);
+			text-align: center;
+			position: relative;
+      margin: 15px;
+		}
+
+		.column p {
+			font-size: calc(16px + 5px);
+			color: #27374D;
+		}
+
+		.column::before {
+			content: '';
+			position: absolute;
+			top: -2px;
+			left: -2px;
+			width: calc(100% + 4px);
+			height: calc(100% + 4px);
+			border: 2px solid #9DB2BF;
+			transition: all 0.5s ease;
+		}
+
+		.column:hover::before {
+			border-width: 6px;
+			width: calc(100% + 12px);
+			height: calc(100% + 12px);
+		}
+    </style>
+</Layout>

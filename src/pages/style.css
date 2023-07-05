@@ -1,0 +1,208 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container{
+  width: 100%;
+  height: 100%;
+  margin: 150px 0; 
+  background-position: center; 
+  background-size: cover;
+  padding-left: 8%;
+  padding-right: 8%;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("images/backgroundimage1.jpg"); 
+  background-size: cover;
+}
+
+.navbar{
+  height: 12%;
+  display: flex;
+  align-items: center;
+  background-color: #000;
+}
+
+
+.menu-icon{
+  width: 30px;
+  margin-left: 60px;
+  cursor: pointer;
+}
+nav{
+    flex: 1;
+    text-align: right;
+
+}
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin-left: 60px;
+    font-size: 20px;
+}
+
+.cimer_class {
+  display :flex;
+  align-items: center;
+}
+
+.cimer_class h4 {
+  color: #fff;
+  font-size: 35px;
+
+}
+
+.map_class {
+  margin: 25px;
+width: 900px;
+height: 800px;
+margin-left: 0px;
+ 
+}
+nav ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+}
+
+.nav ul li ::after{
+  content: '';
+  height: 5px;
+  width: 100%;
+  background: white;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  transition: 0.5s;
+}
+
+.navbar ul li:hover::after{
+  width: 100%;
+}
+
+.row{
+  display: flex;
+  height: fit-content;
+  align-items: center;
+}
+
+.col{
+  flex-basis: 50%;
+}
+
+h1{
+  color: #fff;
+  font-size: 100px;
+
+}
+p{
+  color: white;
+  font-size: 11px;
+  line-height: 15px;
+  
+}
+button{
+  width: 180px;
+  color: #000;
+  font-size: 12px;
+  padding: 22px 0;
+  background: #fff;
+  border: 0;
+  border-radius: 25px;
+  outline: none;
+  margin-top: 30px;
+
+}
+.card{
+    width: 243px;
+    height: 230px;
+    display: inline-block;
+    border-radius: 10px;
+    padding: 15px 25px;
+    box-sizing: border-box;
+    cursor: pointer;
+    margin: 10px 15px;
+    background-image: url(images/Turul.jpg);
+    background-position: center;
+    background-size: cover;
+    transition: 0.5s;
+
+
+}
+
+.card1 {
+  background-image: url(images/Turul.jpg)
+}
+
+.card2 {
+  background-image: url(images/oreg.jpg)
+}
+
+.card3 {
+  background-image: url(images/petofi.jpg)
+}
+
+.card4 {
+  background-image: url(images/varoshaza.jpg)
+}
+
+.card:hover {
+  transform:translateY(-10px)
+}
+.h5 {
+  color: #fff;
+  text-shadow: 0 0 5px #999;
+
+}
+
+.card p {
+  text-shadow: 0 0 15px #000;
+  font-size: 8px;
+}
+
+
+.logo {
+  width: 80px;
+  cursor: pointer;
+  padding: 15px;
+  transition: 0.5s;
+
+
+}
+
+.logo:hover {
+  transform:translateY(-6px)
+   }
+
+
+
+   .footer .footer_container{
+      align-items: center;
+      text-align: center;
+   }
+   .footer .Nagykapos{
+    margin: 0;
+   }
+.footer .menu li {
+  display: inline-block;
+  margin: 1em;
+  text-align: center;
+}
+.footer .menu a {
+  transition: 0.3s;
+  font-weight: 300;
+}
+
+
+.col_3 {
+  padding: 100px;
+}
+
+.col_2 li {
+  color: white;
+  font-size: 17px;
+}
