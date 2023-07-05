@@ -1,12 +1,12 @@
 ---
 import Layout from '../layouts/Layout.astro';
-const images = await Astro.glob("/public/TURUL/*").then(files => {
+const images = await Astro.glob("/public/turul/*").then(files => {
   return files.map(file => file.default);
 });
 ---
 
 
-<Layout title="TURUL MADÁR"> 
+<Layout title="Turul szobor"> 
 <style is:global>
 .img-container {
   display: flex;
